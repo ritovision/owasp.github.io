@@ -1,4 +1,4 @@
-remote_theme: owasp/www--site-theme@main
+remote_theme: ritovision/owasp-sitetheme@fix/broken-mobile-layout
 plugins:
   - jekyll-include-cache-0.2.0
   - jekyll-remote-theme
