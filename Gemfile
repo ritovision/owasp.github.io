@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
-group :jekyll_plugins do
-    gem 'github-pages'
-end
 
-gem "webrick", "~> 1.7"
+gem 'jekyll', '~> 3.9.5'
+gem 'jekyll-remote-theme'
+gem 'jekyll-include-cache'
+gem 'jekyll-redirect-from'
+gem 'kramdown-parser-gfm'
+gem 'webrick', '~> 1.7'

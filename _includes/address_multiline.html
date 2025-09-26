@@ -1,0 +1,21 @@
+{%- comment -%}
+Simple fallback for address_multiline.html expected by theme.
+Usage examples from templates:
+  {% include address_multiline.html address=site.data.office.address %}
+  {% include address_multiline.html text="123 Main St<br>City, ST 00000" %}
+This template accepts either:
+ - include.address as an array of lines, or
+ - include.text as preformatted HTML/text.
+{%- endcomment -%}
+
+{%- if include.address %}
+  <address class="vcard">
+    {%- for line in include.address %}
+      <div>{{ line }}</div>
+    {%- endfor -%}
+  </address>
+{%- elsif include.text %}
+  <address class="vcard">{{ include.text | strip_newlines }}</address>
+{%- else %}
+  {# nothing to render; keep silent to avoid breaking pages #}
+{%- endif -%}

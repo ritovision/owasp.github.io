@@ -1,16 +1,23 @@
-remote_theme: ritovision/owasp-sitetheme@broken-mobile-layout
+# Force UTF-8 encoding
+encoding: utf-8
+
 plugins:
-  - jekyll-include-cache
   - jekyll-remote-theme
+  - jekyll-include-cache
   - jekyll-redirect-from
+
+remote_theme: ritovision/owasp-sitetheme@fix-mobile-layout-urlpatch
+
 include:
   - .well-known
+
 defaults:
   - scope:
       path: "pages/events/featured"
     values:
       event: true
 
-# If your repo is named owasp.github.io:
-baseurl: "/owasp.github.io"
-url: "https://ritovision.github.io"
+# Force fresh builds
+sass:
+  cache: false
+  style: compressed
