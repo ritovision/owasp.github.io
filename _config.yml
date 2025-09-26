@@ -1,6 +1,6 @@
 remote_theme: ritovision/owasp-sitetheme@fix/broken-mobile-layout
 plugins:
-  - jekyll-include-cache-0.2.0
+  - jekyll-include-cache
   - jekyll-remote-theme
   - jekyll-redirect-from
 include:
@@ -9,4 +9,8 @@ defaults:
   - scope:
       path: "pages/events/featured"
     values:
-      event: true  
+      event: true
+
+# If your repo is named owasp.github.io:
+baseurl: "/owasp.github.io"
+url: "https://ritovision.github.io"
